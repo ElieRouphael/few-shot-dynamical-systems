@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+tmp_trials/
+.pytest_cache/
+
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc

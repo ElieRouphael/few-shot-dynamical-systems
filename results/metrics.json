@@ -1,0 +1,92 @@
+{
+  "config": {
+    "seed": 12,
+    "dt": 0.05,
+    "training_tasks": 18,
+    "training_horizon": 500,
+    "adaptation_horizon": 45,
+    "validation_horizon": 180,
+    "excitation_candidates": 400,
+    "monte_carlo_runs": 120,
+    "measurement_std": 0.012,
+    "process_std": 0.018,
+    "process_rho": 0.82,
+    "prior_precision": 0.5
+  },
+  "assumptions": {
+    "measurement": "noisy position only",
+    "disturbance": "colored acceleration noise",
+    "mismatch": "omitted quintic force, force bias, off-manifold coefficients",
+    "actuator": "bounded nonlinear actuator and one-sample delay",
+    "random_baseline": "fresh unscored input in every trial"
+  },
+  "true_test_coefficients": [
+    1.560293306833533,
+    0.2934454703224602,
+    1.0912587560866889,
+    0.08747762274111398
+  ],
+  "rank_two_explained_variance": 0.8217160033027906,
+  "active_information_score": 9.698890329415487,
+  "random_information_score_mean": 5.801471944917412,
+  "rmse": {
+    "no_adaptation": {
+      "mean": 0.05414031221643103,
+      "std": 0.013545727409465873,
+      "median": 0.05311425731954421,
+      "q10": 0.03959362645320363,
+      "q90": 0.06906769221473948
+    },
+    "from_scratch": {
+      "mean": 0.03190082859806937,
+      "std": 0.015521422838748366,
+      "median": 0.030143147667994176,
+      "q10": 0.014777513047007045,
+      "q90": 0.05158249025732377
+    },
+    "random": {
+      "mean": 0.03371704979722924,
+      "std": 0.013134278033533682,
+      "median": 0.03204015194693126,
+      "q10": 0.016780060818575238,
+      "q90": 0.05188300188736131
+    },
+    "active": {
+      "mean": 0.028616656001035214,
+      "std": 0.010524209300011399,
+      "median": 0.027136297812951793,
+      "q10": 0.014945504651129201,
+      "q90": 0.046066091296938845
+    },
+    "oracle": {
+      "mean": 0.018432228020408455,
+      "std": 0.00548916815631503,
+      "median": 0.01814927646880131,
+      "q10": 0.011369299854879333,
+      "q90": 0.02497650290836215
+    }
+  },
+  "coefficient_relative_error": {
+    "from_scratch": {
+      "mean": 0.1208363716623662,
+      "std": 0.045098378798682705
+    },
+    "random": {
+      "mean": 0.17913270188569091,
+      "std": 0.06759663276978205
+    },
+    "active": {
+      "mean": 0.10873126002518232,
+      "std": 0.03134883728814224
+    }
+  },
+  "active_vs_random": {
+    "mean_rmse_reduction": 0.005100393796194025,
+    "relative_mean_reduction": 0.15127046484989795,
+    "paired_bootstrap_95pct_ci": [
+      0.0032459423191566377,
+      0.006959553821617215
+    ],
+    "active_win_rate": 0.6916666666666667
+  }
+}
