@@ -902,18 +902,6 @@ md(r"""
 - *Adapter capacity:* how do we decide online when a small context suffices and when the model
   must grow?
 - *Closing the loop:* how should identification, uncertainty and control be designed jointly?
-
-### Exercises
-
-1. Replace PCA's rank 2 by rank 1 and rank 3. How does §6 change, and why?
-2. Remove the quintic term and the bias from `sample_system`. How close do the learned models get
-   to the reference now?
-3. Replace the D-optimal score by the trace of the posterior covariance (A-optimality), or by the
-   predicted variance of the validation response. Which criterion predicts best?
-4. Add a constraint $|q_t| \le 0.3$ to the experiment design by rejecting candidates whose
-   predicted motion violates it. What does safety cost in information?
-5. Make the disturbance white with the same variance. Does the posterior of §5 become better
-   calibrated? (Hint: check how often the true context lies inside the 2σ ellipse.)
 """),
 ]
 
